@@ -6,7 +6,7 @@ def openwrite(client):
     date_format = "%m-%d-%Y"
     contact_date = today.strftime(date_format)
     file = open(f'{client}.txt', 'a')
-    file.write(f"\n{contact_date}")
+    file.write(f"{contact_date}\n")
     print(client, contact_date)
     file.close()
 
