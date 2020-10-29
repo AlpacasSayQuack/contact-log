@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-def openwrite(client):
+def openwrite(client, note):
     today = datetime.now()
     date_format = "%m-%d-%Y"
     contact_date = today.strftime(date_format)
@@ -16,4 +16,5 @@ while True:
     if client_name == "stop":
         break
     else:
-        openwrite(client_name)
+        notes = input("Enter notes:")
+        openwrite(client_name, notes)
